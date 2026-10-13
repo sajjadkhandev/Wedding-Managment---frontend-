@@ -1,0 +1,64 @@
+/* Import Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Import WedPlan Custom Wedding Theme */
+@import './styles/theme.css';
+
+/* App Container Reset */
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Content Area filling remaining space */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Custom Utilities Calibrated with Logo */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, rgba(25, 22, 20, 0.78) 0%, rgba(38, 33, 29, 0.7) 50%, rgba(18, 15, 13, 0.86) 100%),
+              url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #FFFFFF;
+  padding: clamp(4rem, 6vh + 3vw, 8rem) 1rem clamp(3rem, 4vh + 2vw, 6rem);
+}
+
+.search-box-card {
+  background: #FFFFFF;
+  border-radius: var(--wp-radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 20px 45px rgba(31, 26, 23, 0.16), 0 0 0 1px rgba(197, 160, 89, 0.25);
+  color: var(--wp-text-main);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.feature-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--wp-radius-md);
+  background: var(--wp-gold-light);
+  color: var(--wp-gold-dark);
+  border: 1px solid var(--wp-border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--wp-transition-normal);
+}
+
+.wedding-card:hover .feature-icon-box {
+  background: var(--wp-gold-gradient);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.35);
+  transform: scale(1.08);
+}

@@ -1,0 +1,462 @@
+/* ==========================================================================
+   WedPlan Design System — Luxury Pakistani Wedding Brand Theme
+   Calibrated to Official Royal Champagne Gold & Espresso Brand Logo
+   ========================================================================== */
+
+:root {
+  /* ========================================================================
+     1. Brand Logo Color Palette (Extracted & Harmonized from WedPlan Emblem)
+     ======================================================================== */
+  /* Primary Metallic Gold (Core Logo Monogram Accent) */
+  --wp-gold: #C5A059;
+  --wp-gold-shimmer: #DFC07D;
+  --wp-gold-hover: #B38C40;
+  --wp-gold-dark: #8F6A22;
+  --wp-gold-deep: #6E5016;
+  --wp-gold-light: #FBF5E8;
+  --wp-gold-subtle: #FCF9F2;
+  
+  /* Rich Multi-stop Metallic Gradients */
+  --wp-gold-gradient: linear-gradient(135deg, #E2C785 0%, #C5A059 48%, #A37929 100%);
+  --wp-gold-gradient-hover: linear-gradient(135deg, #E8D094 0%, #D1AC64 48%, #B08534 100%);
+  --wp-gold-gradient-soft: linear-gradient(135deg, rgba(226, 199, 133, 0.18) 0%, rgba(197, 160, 89, 0.08) 100%);
+  --wp-gold-glow: 0 4px 20px rgba(197, 160, 89, 0.28);
+  --wp-gold-glow-hover: 0 8px 30px rgba(197, 160, 89, 0.42);
+
+  /* Royal Espresso & Velvet Dark (Logo Typography & Contrast) */
+  --wp-noir: #1F1A17;
+  --wp-charcoal: #26211D;
+  --wp-charcoal-light: #36302A;
+  --wp-charcoal-subtle: #4D453D;
+
+  /* Pakistani Bridal Rose / Ruby Accent */
+  --wp-rose: #B85D6C;
+  --wp-rose-hover: #9E4A58;
+  --wp-rose-light: #FDF1F3;
+  --wp-rose-border: #F7D5DC;
+
+  /* Warm Pearl Canvas & Surfaces */
+  --wp-bg-main: #FAF8F5;
+  --wp-bg-surface: #FFFFFF;
+  --wp-bg-muted: #F3EFEA;
+  --wp-bg-card-hover: #FDFBF7;
+  --wp-bg-dark: #191614;
+
+  /* Typography Colors */
+  --wp-text-main: #1F1A17;
+  --wp-text-body: #474039;
+  --wp-text-muted: #787066;
+  --wp-text-light: #FAF8F5;
+
+  /* Borders */
+  --wp-border: #E8E2D5;
+  --wp-border-subtle: #F2EDE2;
+  --wp-border-gold: rgba(197, 160, 89, 0.38);
+  --wp-border-gold-strong: rgba(197, 160, 89, 0.65);
+
+  /* Shadows */
+  --wp-shadow-xs: 0 1px 3px rgba(31, 26, 23, 0.05);
+  --wp-shadow-sm: 0 3px 10px rgba(31, 26, 23, 0.06);
+  --wp-shadow-md: 0 8px 25px rgba(31, 26, 23, 0.08);
+  --wp-shadow-lg: 0 16px 40px rgba(31, 26, 23, 0.12);
+  --wp-shadow-hover: 0 14px 30px rgba(197, 160, 89, 0.22);
+
+  /* Radii */
+  --wp-radius-sm: 8px;
+  --wp-radius-md: 14px;
+  --wp-radius-lg: 20px;
+  --wp-radius-full: 9999px;
+
+  /* Typography Fonts */
+  --wp-font-heading: 'Playfair Display', Georgia, serif;
+  --wp-font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --wp-transition-fast: 0.15s ease-in-out;
+  --wp-transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --wp-transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   2. Base Global Styles
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--wp-font-body);
+  color: var(--wp-text-body);
+  background-color: var(--wp-bg-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--wp-gold-light);
+  color: var(--wp-gold-deep);
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-serif {
+  font-family: var(--wp-font-heading);
+  color: var(--wp-text-main);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--wp-transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   3. Bootstrap Color Harmony Overrides (Replacing Yellow with Logo Gold)
+   ========================================================================== */
+
+/* Overriding Bootstrap warning with Logo Champagne Gold */
+.text-warning {
+  color: var(--wp-gold) !important;
+}
+
+.bg-warning {
+  background: var(--wp-gold-gradient) !important;
+  color: #FFFFFF !important;
+}
+
+.border-warning {
+  border-color: var(--wp-gold) !important;
+}
+
+.btn-warning {
+  background: var(--wp-gold-gradient) !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.28);
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+  background: var(--wp-gold-gradient-hover) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.42);
+  transform: translateY(-1px);
+}
+
+.badge.bg-warning {
+  background: var(--wp-gold-light) !important;
+  color: var(--wp-gold-dark) !important;
+  border: 1px solid var(--wp-border-gold);
+  font-weight: 600;
+}
+
+.hover-gold {
+  transition: color var(--wp-transition-fast);
+}
+
+.hover-gold:hover {
+  color: var(--wp-gold) !important;
+}
+
+/* Luxury Utility Classes */
+.text-gold {
+  color: var(--wp-gold) !important;
+}
+
+.text-gold-dark {
+  color: var(--wp-gold-dark) !important;
+}
+
+.text-gold-shimmer {
+  color: var(--wp-gold-shimmer) !important;
+}
+
+.bg-gold {
+  background-color: var(--wp-gold) !important;
+}
+
+.bg-gold-light {
+  background-color: var(--wp-gold-light) !important;
+}
+
+.bg-gold-subtle {
+  background-color: var(--wp-gold-subtle) !important;
+}
+
+.border-gold {
+  border-color: var(--wp-gold) !important;
+}
+
+.border-gold-subtle {
+  border-color: var(--wp-border-gold) !important;
+}
+
+/* ==========================================================================
+   4. Buttons System
+   ========================================================================== */
+.btn-gold {
+  background: var(--wp-gold-gradient);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--wp-radius-full);
+  padding: 0.65rem 1.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.32);
+  text-shadow: 0 1px 2px rgba(110, 80, 22, 0.25);
+  transition: all var(--wp-transition-normal);
+  cursor: pointer;
+}
+
+.btn-gold:hover {
+  background: var(--wp-gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(197, 160, 89, 0.45);
+  color: #FFFFFF !important;
+}
+
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--wp-gold-dark) !important;
+  font-weight: 600;
+  border: 1.5px solid var(--wp-gold);
+  border-radius: var(--wp-radius-full);
+  padding: 0.6rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--wp-transition-normal);
+  cursor: pointer;
+}
+
+.btn-outline-gold:hover {
+  background: var(--wp-gold-light);
+  border-color: var(--wp-gold-hover);
+  color: var(--wp-gold-deep) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.18);
+}
+
+.btn-blush {
+  background: var(--wp-rose-light);
+  color: var(--wp-rose) !important;
+  font-weight: 600;
+  border: 1px solid var(--wp-rose-border);
+  border-radius: var(--wp-radius-full);
+  padding: 0.6rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--wp-transition-normal);
+}
+
+.btn-blush:hover {
+  background: var(--wp-rose);
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   5. Badges System
+   ========================================================================== */
+.badge-gold {
+  background-color: var(--wp-gold-light);
+  color: var(--wp-gold-dark);
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.32rem 0.8rem;
+  border-radius: var(--wp-radius-full);
+  border: 1px solid var(--wp-border-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 1px 3px rgba(197, 160, 89, 0.08);
+}
+
+.badge-blush {
+  background-color: var(--wp-rose-light);
+  color: var(--wp-rose);
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--wp-radius-full);
+  border: 1px solid var(--wp-rose-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-city {
+  background-color: rgba(31, 26, 23, 0.05);
+  color: var(--wp-text-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--wp-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid rgba(31, 26, 23, 0.04);
+}
+
+.badge-demo {
+  background: #FFF8E6;
+  color: #8C6826;
+  border: 1px dashed rgba(197, 160, 89, 0.5);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--wp-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   6. Cards & Media Containers
+   ========================================================================== */
+.wedding-card {
+  background: var(--wp-bg-surface);
+  border: 1px solid var(--wp-border);
+  border-radius: var(--wp-radius-md);
+  box-shadow: var(--wp-shadow-sm);
+  overflow: hidden;
+  transition: all var(--wp-transition-normal);
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+}
+
+.wedding-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--wp-shadow-md), 0 0 0 1px rgba(197, 160, 89, 0.3);
+  border-color: var(--wp-gold);
+}
+
+.card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--wp-bg-muted);
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wedding-card:hover .card-media img {
+  transform: scale(1.06);
+}
+
+/* Currency PKR Display */
+.price-tag {
+  color: var(--wp-gold-dark);
+  font-weight: 700;
+  font-family: var(--wp-font-body);
+}
+
+.price-tag .currency {
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.price-tag .amount {
+  font-size: 1.25em;
+}
+
+/* Section Header Motif */
+.section-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+  position: relative;
+}
+
+.section-header .sub-badge {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+
+.section-header h2 {
+  font-size: clamp(1.85rem, 1.2rem + 1.8vw, 2.75rem);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  color: var(--wp-text-muted);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.section-header .gold-divider {
+  width: 70px;
+  height: 3px;
+  background: var(--wp-gold-gradient);
+  margin: 0.9rem auto 0;
+  border-radius: var(--wp-radius-full);
+  box-shadow: 0 1px 4px rgba(197, 160, 89, 0.3);
+}
+
+/* ==========================================================================
+   7. Glassmorphism Navigation & Header
+   ========================================================================== */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--wp-border);
+  box-shadow: 0 2px 12px rgba(31, 26, 23, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all var(--wp-transition-normal);
+}
+
+/* Top Announcement Helpline Bar */
+.top-announcement-bar {
+  background-color: var(--wp-bg-dark);
+  color: #D3CDC4;
+  font-size: 0.8rem;
+  padding: 0.38rem 0;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--wp-bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #D9D2C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wp-gold);
+}
