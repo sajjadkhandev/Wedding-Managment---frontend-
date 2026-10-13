@@ -26,12 +26,6 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="container py-3 py-lg-4 text-center">
-        {/* Badge */}
-        <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-15 backdrop-blur border border-white border-opacity-20 mb-3">
-          <Sparkles size={16} className="text-warning" />
-          <span className="small text-white fw-semibold">Pakistan's #1 Wedding Marketplace</span>
-        </div>
-
         {/* Heading */}
         <h1 className="font-serif fw-bold text-white mb-3" style={{ fontSize: 'clamp(2.1rem, 2.8vw + 1.2rem, 3.8rem)', letterSpacing: '-0.02em' }}>
           Plan Your Royal Pakistani Wedding With Ease

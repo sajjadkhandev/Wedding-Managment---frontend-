@@ -119,28 +119,6 @@ const Navbar = () => {
 
   return (
     <header className="sticky-top">
-      {/* Top Announcement Bar */}
-      <div className="top-announcement-bar">
-        <div className="container d-flex justify-content-between align-items-center py-1">
-          <div className="d-flex align-items-center gap-3">
-            <span className="badge-demo">Demo Platform</span>
-            <span>Serving Karachi, Lahore, Islamabad & 7+ major cities</span>
-          </div>
-          <div className="d-flex align-items-center gap-3">
-            <span className="text-warning fw-semibold">Currency: PKR (Rs.)</span>
-            <span className="d-none d-md-inline text-secondary">|</span>
-            <a 
-              href="https://wa.me/923069122770?text=Assalam-o-Alaikum%20Sajjad%20Bhai,%20I%20want%20to%20inquire%20about%20WedPlan%20wedding%20services" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="text-light text-decoration-none d-none d-md-inline hover-gold"
-            >
-              <PhoneCall size={13} className="me-1 inline text-warning" /> WhatsApp / Helpline: 0306-9122770 (Sajjad Wazir)
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Glassmorphic Navigation Bar */}
       <nav className="nav-glass py-2 py-lg-3">
         <div className="container d-flex align-items-center justify-content-between">

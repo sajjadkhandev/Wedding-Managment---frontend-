@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
                       <Star key={i} size={16} fill="currentColor" />
                     ))}
                   </div>
-                  <span className="badge-demo">Demo Testimonial</span>
+                  <span className="badge bg-warning bg-opacity-25 text-dark small fw-semibold" style={{ fontSize: '0.7rem' }}>Verified Client</span>
                 </div>
 
                 <div className="text-warning opacity-25 mb-2">
